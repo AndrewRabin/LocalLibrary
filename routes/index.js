@@ -7,7 +7,7 @@ router.get('/express', function(req, res, next) {
 });
 
 router.get('/', function(req, res){
-  console.error("AR Make /catalog/index.html!");
+    console.log("AR index.html => /catalog redirect");
     res.redirect('/catalog');
 })
 

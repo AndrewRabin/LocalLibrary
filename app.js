@@ -14,13 +14,13 @@ var app = express();
 
 /////////////// DB /////////////////////////////////////////
 
-// var mongoose = require('mongoose');
-// var mongoDB = 'mongodb+srv://dbAdmin:dbAdmin@cluster0.e1tui.mongodb.net/dbLib?retryWrites=true&w=majority';
-// //var client = new MongoClient(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-// mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-// mongoose.Promise = global.Promise;
-// var db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb+srv://dbAdmin:dbAdmin@cluster0.e1tui.mongodb.net/dbLib?retryWrites=true&w=majority';
+//var client = new MongoClient(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 ////////////////////////////////////////////////////////////
 
